@@ -29,7 +29,7 @@ public class SocketClientExample {
             //read the server response message
             ois = new ObjectInputStream(socket.getInputStream());
             String message = (String) ois.readObject();
-            System.out.println("Dean Satria MP: " + message);
+            System.out.println("Lukas Febrian L: " + message);
             //close resources
             ois.close();
             oos.close();
