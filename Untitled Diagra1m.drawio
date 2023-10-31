@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2023-10-31T23:26:20.655Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" version="22.0.8" etag="zQETymSODLxEidSZ4ebe" type="github">
+  <diagram name="Page-1" id="-ttD5hl9ELL4ipLjMfZB">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Pengguna membuka halaman login pada website&#xa;sistem informasi akademik" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="148" width="362" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Pengguna memasukkan username dan password&#xa;pada form login" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="151" y="100" width="355" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Sistem melakukan verifikasi&#xa;username dan password yang dimasukkan&#xa;oleh pengguna" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="173" y="199" width="312" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Jika username dan password&#xa;yang dimasukkan benar, pengguna dapat&#xa;masuk ke dalam sistem informasi akademik" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry y="334" width="327" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Jika username dan password&#xa;yang dimasukkan salah, sistem&#xa;menampilkan pesan kesalahan" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="377" y="334" width="235" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5000845450722711;exitY=0.9933333587646485;entryX=0.5014946628624285;entryY=-0.006666641235351562;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5014946628624285;exitY=0.9866667175292969;entryX=0.5000980939620581;entryY=0.005050543582800663;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Benar" style="curved=1;startArrow=none;endArrow=block;exitX=0.24068568133759508;exitY=1;entryX=0.4998765764615587;entryY=-0.0050504857843572445;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="163" y="299" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="Salah" style="curved=1;startArrow=none;endArrow=block;exitX=0.759510506586521;exitY=1;entryX=0.5004322133165725;entryY=-0.0050504857843572445;" edge="1" parent="1" source="4" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="299" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
