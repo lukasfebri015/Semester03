@@ -1,0 +1,16 @@
+{
+  "name": "mpuusss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lukas Febrian L",
+  "license": "ISC",
+  "description": "Tugas Program Platform",
+  "repository": {
+    "type": "git",
+    "url": "JavaScript"
+  }
+}
