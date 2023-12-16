@@ -1,44 +1,105 @@
-Berikut adalah contoh script JavaScript untuk membuat API Endpoint
-untuk tabel mahasiswa dan dosen dengan masing-masing 10 data:
+Berikut adalah contoh kode JavaScript untuk menampilkan data mahasiswa dan dosen. Berdasarkan informasi yang diberikan dalam file[1], berikut adalah struktur data yang akan digunakan:
 
 ```javascript
-// Import library dan framework yang diperlukan
-const express = require('express');
-const app = express();
-
-// Data mahasiswa
-const mahasiswa = [
-  { nim: '110202020', nama: 'Lukas', gender: 'L', prod: 'I', alamat: 'Cisaat' },
-  // Tambahkan data mahasiswa lainnya di sini
+const dataMahasiswa = [
+  {
+    nim: "M01",
+    nama: "Mahasiswa 1",
+    kelas: "A",
+    umur: 20,
+  },
+  {
+    nim: "M02",
+    nama: "Mahasiswa 2",
+    kelas: "B",
+    umur: 22,
+  },
+  // ... tambahkan data mahasiswa selanjutnya
 ];
 
-// Data dosen
-const dosen = [
-  { nip: '123456789', nama: 'John Doe', gender: 'L', jabatan: 'Dosen Tetap' },
-  // Tambahkan data dosen lainnya di sini
+const dataDosen = [
+  {
+    nim: "D01",
+    nama: "Dosen 1",
+    matkul: "Matakul 1",
+    matkul2: "Matakul 2",
+  },
+  {
+    nim: "D02",
+    nama: "Dosen 2",
+    matkul: "Matakul 3",
+    matkul2: "Matakul 4",
+  },
+  // ... tambahkan data dosen selanjutnya
 ];
 
-// Endpoint untuk mendapatkan data mahasiswa
-app.get('/mahasiswa', (req, res) => {
-  res.json(mahasiswa);
-});
+function tampilData() {
+  const tabelMahasiswa = document.getElementById("tabelMahasiswa");
+  const tabelDosen = document.getElementById("tabelDosen");
 
-// Endpoint untuk mendapatkan data dosen
-app.get('/dosen', (req, res) => {
-  res.json(dosen);
-});
+  // Clear data tabel sebelum menambahkan data baru
+  tabelMahasiswa.innerHTML = "";
+  tabelDosen.innerHTML = "";
 
-// Jalankan server pada port 3000
-app.listen(3000, () => {
-  console.log('Server berjalan pada port 3000');
-});
+  // Tambahkan data mahasiswa ke tabel
+  dataMahasiswa.forEach((mahasinwa) => {
+    const baris = document.createElement("tr");
+    baris.innerHTML = `
+      <td>${mahasinwa.nim}</td>
+      <td>${mahasinwa.nama}</td>
+      <td>${mahasinwa.kelas}</td>
+      <td>${mahasinwa.umur}</td>
+    `;
+    tabelMahasiswa.appendChild(baris);
+  });
+
+  // Tambahkan data dosen ke tabel
+  dataDosen.forEach((dosen) => {
+    const baris = document.createElement("tr");
+    baris.innerHTML = `
+      <td>${dosen.nim}</td>
+      <td>${dosen.nama}</td>
+      <td>${dosen.matkul}</td>
+      <td>${dosen.matkul2}</td>
+    `;
+    tabelDosen.appendChild(baris);
+  });
+}
+
+// Fungsi untuk menampilkan data setelah menekan tombol
+function tombolTampilData() {
+  tampilData();
+}
+
+// Menambahkan event listener tombol
+const tombol = document.getElementById("tombolTampilData");
+tombol.addEventListener("click", tombolTampilData);
 ```
 
-Dalam contoh di atas, kita menggunakan framework Express untuk membuat server HTTP.
-Data mahasiswa dan dosen disimpan dalam array. Kemudian, kita mendefinisikan
-dua endpoint `/mahasiswa` dan `/dosen` yang akan mengembalikan data mahasiswa dan dosen secara JSON.
+Code di atas menciptakan dua array `dataMahasiswa` dan `dataDosen` yang berisi data mahasiswa dan dosen.
+Fungsi `tampilData` digunakan untuk menambahkan data mahasiswa dan dosen ke tabel yang berbeda.
+Tombol "Tampil Data" digunakan untuk memanggil fungsi `tampilData` setiap kali tombol ditekan.
 
-Untuk menjalankan script di atas, pastikan Anda telah menginstal Node.js dan Express.
-Simpan script di dalam file dengan ekstensi `.js`, lalu jalankan dengan perintah `node nama_file.js`.
-Setelah itu, Anda dapat mengakses data mahasiswa dan dosen melalui URL
-`http://localhost:3000/mahasiswa` dan `http://localhost:3000/dosen`.
+HTML:
+```html
+<button id="tombolTampilData">Tampil Data</button>
+<table id="tabelMahasiswa">
+  <tr>
+    <th>NIM</th>
+    <th>Nama</th>
+    <th>Kelas</th>
+    <th>Umur</th>
+  </tr>
+</table>
+<table id="tabelDosen">
+  <tr>
+    <th>NIM</th>
+    <th>Nama</th>
+    <th>Matakul 1</th>
+    <th>Matakul 2</th>
+  </tr>
+</table>
+```
+
+Dalam HTML, kita membuat tombol dengan id "tombolTampilData" yang akan menanggil fungsi `tampilData` saat ditekan.
+Kita juga membuat dua tabel dengan id "tabelMahasiswa" dan "tabelDosen" yang akan menampilkan data mahasiswa dan dosen yang diberikan.
