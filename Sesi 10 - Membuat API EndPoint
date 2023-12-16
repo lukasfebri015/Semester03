@@ -1,0 +1,64 @@
+Berikut adalah contoh script menggunakan JavaScript untuk mengisi data mahasiswa dan dosen sebanyak 10 data:
+
+```javascript
+// Membuat array kosong untuk menyimpan data mahasiswa dan dosen
+var data_mahasiswa = [];
+var data_dosen = [];
+
+// Mengisi data mahasiswa sebanyak 10 data
+for (var i = 0; i < 10; i++) {
+  var nim = prompt("Masukkan NIM Mahasiswa: ");
+  var nama = prompt("Masukkan Nama Mahasiswa: ");
+  var gender = prompt("Masukkan Gender Mahasiswa (L/P): ");
+  var prodi = prompt("Masukkan Program Studi Mahasiswa: ");
+  var alamat = prompt("Masukkan Alamat Mahasiswa: ");
+  
+  // Membuat objek untuk menyimpan data mahasiswa
+  var mahasiswa = {
+    nim: nim,
+    nama: nama,
+    gender: gender,
+    prodi: prodi,
+    alamat: alamat
+  };
+  
+  // Menambahkan data mahasiswa ke dalam array
+  data_mahasiswa.push(mahasiswa);
+}
+
+// Mengisi data dosen sebanyak 10 data
+for (var i = 0; i < 10; i++) {
+  var nip = prompt("Masukkan NIP Dosen: ");
+  var nama = prompt("Masukkan Nama Dosen: ");
+  var gender = prompt("Masukkan Gender Dosen (L/P): ");
+  var prodi = prompt("Masukkan Program Studi Dosen: ");
+  var alamat = prompt("Masukkan Alamat Dosen: ");
+  
+  // Membuat objek untuk menyimpan data dosen
+  var dosen = {
+    nip: nip,
+    nama: nama,
+    gender: gender,
+    prodi: prodi,
+    alamat: alamat
+  };
+  
+  // Menambahkan data dosen ke dalam array
+  data_dosen.push(dosen);
+}
+
+// Menampilkan hasil data mahasiswa
+console.log("Data Mahasiswa:");
+console.log(data_mahasiswa);
+
+// Menampilkan hasil data dosen
+console.log("\nData Dosen:");
+console.log(data_dosen);
+```
+
+Dalam script di atas, kita menggunakan perulangan `for` untuk mengisi data mahasiswa dan
+dosen sebanyak 10 data. Setiap data mahasiswa dan dosen dimasukkan ke dalam objek yang sesuai,
+dan objek tersebut kemudian ditambahkan ke dalam array `data_mahasiswa` dan `data_dosen`.
+Setelah semua data mahasiswa dan dosen diisi, kita menggunakan `console.log()` untuk menampilkan hasil data
+mahasiswa dan dosen yang telah diisi. Anda dapat menjalankan script ini di browser atau di lingkungan pengembangan
+JavaScript lainnya untuk melihat hasilnya di konsol.
