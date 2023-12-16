@@ -1,4 +1,4 @@
-Berikut adalah contoh kode JavaScript untuk menampilkan data mahasiswa dan dosen. Berdasarkan informasi yang diberikan dalam file[1], berikut adalah struktur data yang akan digunakan:
+Berikut adalah contoh kode JavaScript untuk menampilkan data mahasiswa dan dosen. Berdasarkan informasi yang diberikan dalam file, berikut adalah struktur data yang akan digunakan:
 
 ```javascript
 const dataMahasiswa = [
