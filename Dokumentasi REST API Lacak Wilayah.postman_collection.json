@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "67c7aa1a-1d11-40bc-b43a-29283dbd07f7",
+		"name": "Dokumentasi REST API Lacak Wilayah",
+		"description": "Dokumentasi REST API Lacak Wilayah adalah sebuah dokumentasi yang mencakup tentang cara mengakses dan menggunakan API untuk melacak wilayah. API ini dapat digunakan untuk mengambil data wilayah, mengubah data wilayah, dan menghapus data wilayah.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32351847"
+	},
+	"item": [
+		{
+			"name": "Province",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rajaongkir\": {\r\n        \"query\": {\r\n            \"id\": \"12\"\r\n        },\r\n        \"status\": {\r\n            \"code\": 200,\r\n            \"description\": \"OK\"\r\n        },\r\n        \"results\": {\r\n           \"province_id\": \"12\",\r\n           \"province\": \"Kalimantan Barat\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/province",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"province"
+					]
+				},
+				"description": "Method \"province\" digunakan untuk mendapatkan daftar propinsi yang ada di Indonesia."
+			},
+			"response": []
+		},
+		{
+			"name": "City",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rajaongkir\": {\r\n        \"query\": {\r\n            \"province\": \"5\",\r\n            \"id\": \"39\"\r\n        },\r\n        \"status\": {\r\n            \"code\": 200,\r\n            \"description\": \"OK\"\r\n        },\r\n        \"results\": {\r\n           \"city_id\": \"39\",\r\n           \"province_id\": \"5\",\r\n           \"province\": \"DI Yogyakarta\",\r\n           \"type\": \"Kabupaten\",\r\n           \"city_name\": \"Bantul\",\r\n           \"postal_code\": \"55700\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/city",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"city"
+					]
+				},
+				"description": "Method \"city\" digunakan untuk mendapatkan daftar kota/kabupaten yang ada di Indonesia."
+			},
+			"response": []
+		},
+		{
+			"name": "Subdistrict",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"query\":{\r\n         \"city\":\"39\"\r\n      },\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"results\":[\r\n         {\r\n            \"subdistrict_id\":\"537\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Bambang Lipuro\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"538\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Banguntapan\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"539\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Bantul\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"540\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Dlingo\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"541\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Imogiri\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"542\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Jetis\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"543\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Kasihan\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"544\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Kretek\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"545\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Pajangan\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"546\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Pandak\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"547\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Piyungan\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"548\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Pleret\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"549\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Pundong\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"550\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Sanden\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"551\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Sedayu\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"552\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Sewon\"\r\n         },\r\n         {\r\n            \"subdistrict_id\":\"553\",\r\n            \"province_id\":\"5\",\r\n            \"province\":\"DI Yogyakarta\",\r\n            \"city_id\":\"39\",\r\n            \"city\":\"Bantul\",\r\n            \"type\":\"Kabupaten\",\r\n            \"subdistrict_name\":\"Srandakan\"\r\n         }\r\n      ]\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/subdistrict",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"subdistrict"
+					]
+				},
+				"description": "Method \"subdistrict\" digunakan untuk mendapatkan daftar kecamatan yang ada di Indonesia."
+			},
+			"response": []
+		},
+		{
+			"name": "Cost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"query\":{\r\n         \"origin\":\"501\",\r\n         \"originType\":\"city\",\r\n         \"destination\":\"574\",\r\n         \"destinationType\":\"subdistrict\",\r\n         \"weight\":1700,\r\n         \"courier\":\"jne\"\r\n      },\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"origin_details\":{\r\n         \"city_id\":\"501\",\r\n         \"province_id\":\"5\",\r\n         \"province\":\"DI Yogyakarta\",\r\n         \"type\":\"Kota\",\r\n         \"city_name\":\"Yogyakarta\",\r\n         \"postal_code\":\"55000\"\r\n      },\r\n      \"destination_details\":{\r\n         \"subdistrict_id\":\"574\",\r\n         \"province_id\":\"10\",\r\n         \"province\":\"Jawa Tengah\",\r\n         \"city_id\":\"41\",\r\n         \"city\":\"Banyumas\",\r\n         \"type\":\"Kabupaten\",\r\n         \"subdistrict_name\":\"Banyumas\"\r\n      },\r\n      \"results\":[\r\n         {\r\n            \"code\":\"jne\",\r\n            \"name\":\"Jalur Nugraha Ekakurir (JNE)\",\r\n            \"costs\":[\r\n               {\r\n                  \"service\":\"OKE\",\r\n                  \"description\":\"Ongkos Kirim Ekonomis\",\r\n                  \"cost\":[\r\n                     {\r\n                        \"value\":26000,\r\n                        \"etd\":\"6-7\",\r\n                        \"note\":\"\"\r\n                     }\r\n                  ]\r\n               },\r\n               {\r\n                  \"service\":\"REG\",\r\n                  \"description\":\"Layanan Reguler\",\r\n                  \"cost\":[\r\n                     {\r\n                        \"value\":30000,\r\n                        \"etd\":\"4-5\",\r\n                        \"note\":\"\"\r\n                     }\r\n                  ]\r\n               }\r\n            ]\r\n         }\r\n      ]\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/cost",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"cost"
+					]
+				},
+				"description": "Method “cost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) dari dan ke kecamatan tujuan tertentu dengan berat tertentu pula."
+			},
+			"response": []
+		},
+		{
+			"name": "InternationalOrigin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"query\":{\r\n         \"id\":\"152\",\r\n         \"province\":\"6\"\r\n      },\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"results\":[\r\n         {\r\n            \"city_id\":\"152\",\r\n            \"province_id\":\"6\",\r\n            \"province\":\"DKI Jakarta\",\r\n            \"type\":\"Kota\",\r\n            \"city_name\":\"Jakarta Pusat\",\r\n            \"postal_code\":\"10000\"\r\n         }\r\n      ]\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/v2/internationalOrigin",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"internationalOrigin"
+					]
+				},
+				"description": "Method \"internationalOrigin\" digunakan untuk mendapatkan daftar/nama kota yang mendukung pengiriman internasional."
+			},
+			"response": []
+		},
+		{
+			"name": "InternationalDestination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"query\":{\r\n         \"id\":\"108\"\r\n      },\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"results\":{\r\n         \"country_id\":\"108\",\r\n         \"country_name\":\"Malaysia\"\r\n      }\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/v2/internationalDestination",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"internationalDestination"
+					]
+				},
+				"description": "Method \"internationalDestination\" digunakan untuk mendapatkan daftar/nama negara tujuan pengiriman internasional."
+			},
+			"response": []
+		},
+		{
+			"name": "InternationalCost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"query\":{\r\n         \"origin\":\"152\",\r\n         \"destination\":\"108\",\r\n         \"weight\":1400,\r\n         \"courier\":\"pos\"\r\n      },\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"origin_details\":{\r\n         \"city_id\":\"152\",\r\n         \"province_id\":\"6\",\r\n         \"province\":\"DKI Jakarta\",\r\n         \"type\":\"Kota\",\r\n         \"city_name\":\"Jakarta Pusat\",\r\n         \"postal_code\":\"10540\"\r\n      },\r\n      \"destination_details\":{\r\n         \"country_id\":\"108\",\r\n         \"country_name\":\"Malaysia\"\r\n      },\r\n      \"results\":[\r\n         {\r\n            \"code\":\"pos\",\r\n            \"name\":\"POS Indonesia (POS)\",\r\n            \"costs\":[\r\n               {\r\n                  \"service\":\"Surat R LN\",\r\n                  \"cost\":279972,\r\n                  \"currency\":\"IDR\",\r\n                  \"etd\":\"\"\r\n               },\r\n               {\r\n                  \"service\":\"EMS DOKUMEN\",\r\n                  \"cost\":273108,\r\n                  \"currency\":\"IDR\",\r\n                  \"etd\":\"\"\r\n               },\r\n               {\r\n                  \"service\":\"EMS BARANG\",\r\n                  \"cost\":324901,\r\n                  \"currency\":\"IDR\",\r\n                  \"etd\":\"\"\r\n               },\r\n               {\r\n                  \"service\":\"PAKETPOS CEPAT LN\",\r\n                  \"cost\":274106,\r\n                  \"currency\":\"IDR\",\r\n                  \"etd\":\"\"\r\n               },\r\n               {\r\n                  \"service\":\"PAKETPOS BIASA LN\",\r\n                  \"cost\":182648,\r\n                  \"currency\":\"IDR\",\r\n                  \"etd\":\"\"\r\n               }\r\n            ]\r\n         }\r\n      ],\r\n      \"currency\":null\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/v2/internationalCost",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"internationalCost"
+					]
+				},
+				"description": "Method “internationalCost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) internasional dari kota-kota di Indonesia ke negara tujuan di seluruh dunia."
+			},
+			"response": []
+		},
+		{
+			"name": "Currency",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"result\":{\r\n         \"value\":13140,\r\n         \"last_update\":\"2015-03-20\",\r\n         \"source_name\":\"Bank Sentral Republik Indonesia (BI)\",\r\n         \"source_link\":\"http:\\/\\/www.bi.go.id\\/en\\/moneter\\/informasi-kurs\\/transaksi-bi\\/Default.aspx\"\r\n      }\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/currency",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"currency"
+					]
+				},
+				"description": "Method \"currency\" digunakan untuk mendapatkan informasi nilai tukar rupiah terhadap US dollar."
+			},
+			"response": []
+		},
+		{
+			"name": "Waebill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"rajaongkir\":{\r\n      \"query\":{\r\n         \"waybill\":\"SOCAG00183235715\",\r\n         \"courier\":\"jne\"\r\n      },\r\n      \"status\":{\r\n         \"code\":200,\r\n         \"description\":\"OK\"\r\n      },\r\n      \"result\":{\r\n         \"delivered\":true,\r\n         \"summary\":{\r\n            \"courier_code\":\"jne\",\r\n            \"courier_name\":\"Jalur Nugraha Ekakurir (JNE)\",\r\n            \"waybill_number\":\"SOCAG00183235715\",\r\n            \"service_code\":\"OKE\",\r\n            \"waybill_date\":\"2015-03-03\",\r\n            \"shipper_name\":\"IRMA F\",\r\n            \"receiver_name\":\"RISKA VIVI\",\r\n            \"origin\":\"WONOGIRI,KAB.WONOGIRI\",\r\n            \"destination\":\"PALEMBANG\",\r\n            \"status\":\"DELIVERED\"\r\n         },\r\n         \"details\":{\r\n            \"waybill_number\":\"SOCAG00183235715\",\r\n            \"waybill_date\":\"2015-03-03\",\r\n            \"waybill_time\":\"13:23\",\r\n            \"weight\":\"1\",\r\n            \"origin\":\"WONOGIRI,KAB.WONOGIRI\",\r\n            \"destination\":\"PALEMBANG\",\r\n            \"shippper_name\":\"IRMA F\",\r\n            \"shipper_address1\":\"WONOGIRI\",\r\n            \"shipper_address2\":null,\r\n            \"shipper_address3\":null,\r\n            \"shipper_city\":\"WONOGIRI\",\r\n            \"receiver_name\":\"RISKA VIVI\",\r\n            \"receiver_address1\":\"PERUMAHAN BUKIT SEJAHTERA\",\r\n            \"receiver_address2\":\"AF 05 RT 074\\/022\",\r\n            \"receiver_address3\":\"PALEMBANG\",\r\n            \"receiver_city\":\"PALEMBANG\"\r\n         },\r\n         \"delivery_status\":{\r\n            \"status\":\"DELIVERED\",\r\n            \"pod_receiver\":\"RISKA\",\r\n            \"pod_date\":\"2015-03-05\",\r\n            \"pod_time\":\"13:22\"\r\n         },\r\n         \"manifest\":[\r\n            {\r\n               \"manifest_code\":\"1\",\r\n               \"manifest_description\":\"Manifested\",\r\n               \"manifest_date\":\"2015-03-04\",\r\n               \"manifest_time\":\"03:41\",\r\n               \"city_name\":\"SOLO\"\r\n            },\r\n            {\r\n               \"manifest_code\":\"2\",\r\n               \"manifest_description\":\"On Transit\",\r\n               \"manifest_date\":\"2015-03-04\",\r\n               \"manifest_time\":\"15:44\",\r\n               \"city_name\":\"JAKARTA\"\r\n            },\r\n            {\r\n               \"manifest_code\":\"3\",\r\n               \"manifest_description\":\"Received On Destination\",\r\n               \"manifest_date\":\"2015-03-05\",\r\n               \"manifest_time\":\"08:57\",\r\n               \"city_name\":\"PALEMBANG\"\r\n            }\r\n         ]\r\n      }\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://pro.rajaongkir.com/api/waybill",
+					"protocol": "https",
+					"host": [
+						"pro",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"api",
+						"waybill"
+					]
+				},
+				"description": "Method “waybill” untuk digunakan melacak/mengetahui status pengiriman berdasarkan nomor resi."
+			},
+			"response": []
+		}
+	]
+}
